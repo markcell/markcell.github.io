@@ -9,7 +9,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="alert alert-warning">The url does not exist, is only for example.</div>
+        <div class="alert alert-warning">The url "example.php" does not exist, is only for example.</div>
         <table class="table table-striped table-bordered" id="example1">
           <thead>
             <tr>
@@ -73,20 +73,20 @@
   <script src="../js/tabledit.js"></script>
   <script>
     $('#example1').Tabledit({
-        url: 'example1.php',
+        url: 'example.php',
         columns: {
             identifier: [0, 'id'],                    
             editable: [[2, 'firstname'], [3, 'lastname']]
         }
     });
     $('#example2').Tabledit({
-        url: 'example2.php',
+        url: 'example.php',
         eventType: 'dblclick',
         hideIdentifier: true,
         textSelection: false,
         columns: {
             identifier: [0, 'id'],                    
-            editable: [[1, 'car'], [2, 'color', '{"1": "red", "2": "green", "3": "blue"}']]
+            editable: [[1, 'car'], [2, 'color', '{"1": "Red", "2": "Green", "3": "Blue"}']]
         }
     });
   </script>
