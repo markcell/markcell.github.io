@@ -4,8 +4,27 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <title>jQuery-Tabledit Example #1</title>
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
-  <script src="../js/jquery.js"></script>
-  <script src="../js/tabledit.js"></script>
+  <style>
+    .panel > .panel-body + .table,
+    .panel > .panel-body + .table-responsive,
+    .panel > .table + .panel-body,
+    .panel > .table-responsive + .panel-body,
+    .panel > form > .table + .panel-body {
+      border-top: 1px solid #ddd;
+    }
+    .panel > .table-responsive:last-child > .table:last-child, 
+    .panel > .table:last-child,
+    .panel > form > .table:last-child {
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    .panel > .panel-collapse > .table,
+    .panel > .table,
+    .panel > .table-responsive > .table,
+    .panel > form > .table {
+      margin-bottom: 0;
+    }
+  </style>
 </head>
 <body style="padding: 50px;">
   <div class="container">
@@ -17,7 +36,7 @@
             <p>It's just an example. The url does not work.</p>
             <p>Only with the required options.</p>
           </div>
-          <table class="table table-bordered table-striped">
+          <table class="table table-striped">
             <thead>
               <tr>
                 <th>#</th>
@@ -51,6 +70,8 @@
       </div>
     </div>
   </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/tabledit.js"></script>
   <script>
     $('table').Tabledit({
         url: 'example1.php',
