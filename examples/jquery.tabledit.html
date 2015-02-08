@@ -112,10 +112,11 @@
             </div>
         </div>
         <script src="../assets/js/jquery.min.js"></script>
-        <script src="../assets/js/tabledit.min.js"></script>
+        <script src="../assets/js/tabledit.min_v1.0.0.js"></script>
         <script>
             // Example 1
             $('#example1').Tabledit({
+                url: 'example.php',
                 columns: {
                     identifier: [0, 'id'],
                     editable: [[2, 'firstname'], [3, 'lastname']]
